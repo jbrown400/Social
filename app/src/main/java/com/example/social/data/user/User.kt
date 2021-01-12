@@ -2,6 +2,7 @@ package com.example.social.data.user
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.social.data.post.Post
 import kotlinx.android.parcel.Parcelize
 
 
@@ -12,7 +13,9 @@ data class User(
     val lastName: String,
     val birthday: String,
     @PrimaryKey val id: String,
-    val biography: UserBio
+    val biography: UserBio,
+    val friends: List<User>,
+    val likedPosts: List<Post>
 ) {
 }
 

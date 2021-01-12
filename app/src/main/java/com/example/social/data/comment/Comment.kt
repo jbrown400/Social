@@ -3,6 +3,7 @@ package com.example.social.data.comment
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.social.data.post.Reactions
+import com.example.social.data.user.User
 import kotlinx.android.parcel.Parcelize
 
 
@@ -11,6 +12,7 @@ import kotlinx.android.parcel.Parcelize
 class Comment(
     val text: String,
     val reactions: Reactions,
+    val mentions: List<User>,
     val replies: List<Comment>,
     @PrimaryKey val id: String,
 ) {

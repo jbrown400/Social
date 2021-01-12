@@ -40,6 +40,6 @@ data class Rage(val count: Int)
 data class Hug(val count: Int)
 
 
-enum class PrivacyLevel{
+enum class PrivacyLevel {
     PUBLIC, FRIENDS, ME, CUSTOM
 }
