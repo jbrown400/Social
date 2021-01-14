@@ -1,5 +1,6 @@
 package com.example.social.data.comment
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.social.data.post.Reactions
@@ -11,10 +12,10 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 class Comment(
     val text: String,
-    val reactions: Reactions,
+    val reactions: List<Reactions>,
     val mentions: List<User>,
     val replies: List<Comment>,
     @PrimaryKey val id: String,
-) {
+) : Parcelable {
 
 }

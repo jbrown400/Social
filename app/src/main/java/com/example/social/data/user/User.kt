@@ -1,5 +1,6 @@
 package com.example.social.data.user
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.social.data.post.Post
@@ -16,8 +17,9 @@ data class User(
     val biography: UserBio,
     val friends: List<User>,
     val likedPosts: List<Post>
-) {
+) : Parcelable {
 }
 
 //todo going to need to add a Type Converter for this
-data class UserBio(var text: String)
+@Parcelize
+data class UserBio(var text: String): Parcelable
